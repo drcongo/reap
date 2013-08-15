@@ -60,6 +60,13 @@ class Harvest(ReapBase):
         client_response = self.get_request('clients/%s' % client_id)
         return Client(self, client_response['client'])
 
+    def get_client_by_name(self, name):
+        '''Gets a single client by name.'''
+        cl = self.clients()
+        for client in cl:
+            if client.name == name:
+                return client
+
     def get_project(self, project_id):
         '''Gets a single project by id.'''
         project_response = self.get_request('projects/%s' % project_id)
