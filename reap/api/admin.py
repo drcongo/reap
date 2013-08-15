@@ -82,7 +82,7 @@ class Harvest(ReapBase):
             return Person(self, response['user'])
 
     def create_project(self, name, client_id, budget = None, budget_by =
-    	'none', notes = None, billable = True):
+    	'none', notes = None, billable = True, code = None):
         '''Creates a Project with the given information.'''
         project = {'project':{
             'name': name,
@@ -91,6 +91,7 @@ class Harvest(ReapBase):
             'budget': budget,
             'notes': notes,
             'billable': billable,
+            'code':code
         }}
         response = self.post_request('projects/', project, follow = True)
         if response:
