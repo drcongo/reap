@@ -1,3 +1,15 @@
+## Installing this fork
+
+Note, all the hard work was done by @jakebasile but if this fork ever happens to be ahead and you need the new features, you can install directly from this fork by adding this to your requirements.txt
+
+    -e git+https://github.com/drcongo/reap.git@v0.6.1#egg=reap-dev
+
+Or by running...
+
+    pip install -e git+https://github.com/drcongo/reap.git@v0.6.1#egg=reap-dev
+
+Note that the ```v0.6.1``` bit between the @ and # symbols is a version tag, you can grab the one you need from the [releases page](https://github.com/drcongo/reap/releases).
+
 # **Reap**. The Simple Command Line  and Library for Harvest.
 
 **Reap** focuses on providing a simple and clear command line interface and python library for the [Harvest](http://www.harvestapp.com) time tracking system.
